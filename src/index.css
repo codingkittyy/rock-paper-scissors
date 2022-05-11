@@ -1,13 +1,158 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+*{
+  box-sizing: border-box;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.step1 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 8rem 4rem 4rem;
+  width: 100%;
+}
+
+.step1-container {
+  height: -webkit-max-content;
+  height: max-content;
+  position: relative;
+  width: min(calc(100% - 12rem),-webkit-max-content);
+  width: min(calc(100% - 12rem),max-content);
+}
+
+.step1-options>div:nth-child(2) {
+  margin-left: auto;
+}
+
+div {
+  display: block;
+}
+
+.step1-options {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  inset: -4rem;
+  justify-content: center;
+  position: absolute;
+}
+
+.step1-options>div:first-child {
+  margin-right: auto;
+}
+
+.option {
+  align-items: center;
+  background-color: #fff;
+  border: 18px solid #e6e6e6;
+  border-color: var(--border-color,#e6e6e6);
+  border-radius: 50%;
+  box-shadow: inset 0 5px 6px grey, 0 8px #e6e6e6;
+  box-shadow: inset 0 5px 6px grey,0 8px var(--shadow-color,#e6e6e6);
+  display: flex;
+  height: 160px;
+  justify-content: center;
+  transition: -webkit-transform .15s ease-in-out;
+  transition: transform .15s ease-in-out;
+  transition: transform .15s ease-in-out,-webkit-transform .15s ease-in-out;
+  width: 160px;
+}
+
+.option.selectable {
+  cursor: pointer;
+}
+
+.option[title=Paper] {
+  --border-color: #4865f4;
+  --shadow-color: #0d31e3;
+}
+
+.option[title=Paper]:hover {
+  height: 175px;
+  width: 175px;
+  transition:all ease-in-out 0.2s;
+}
+
+
+.option[title=Scissors]:hover {
+  height: 175px;
+  width: 175px;
+  transition:all ease-in-out 0.2s;
+}
+
+
+
+.option[title=Rock]:hover {
+  height: 175px;
+  width: 175px;
+  transition:all ease-in-out 0.2s;
+}
+
+
+.option[title=Scissors] {
+  --border-color: #ec9e0e;
+  --shadow-color: #a46e0a;
+}
+
+.option[title=Rock] {
+  --border-color: #dc2e4e;
+  --shadow-color: #a11b34;
+}
+
+.general-frame{
+  border: 3px solid rgba(255, 255, 255, 0.384);
+  border-radius: 10px;
+  width: 75vh;
+  padding: 20px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.general-frame img{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: auto 35px;
+  
+}
+
+.score-frame{
+  background-color: white;
+  padding: 15px 35px;
+  border-radius: 15px;
+  
+}
+
+.score-frame h3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #3154c2;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.score-frame h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b4363;
+  font-weight: 800;
+  font-size: 45px;
 }
